@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">LocSaver</string>
+    <string name="add_button_plus">+</string>
+    <string name="my_locations">My locations</string>
+    <string name="locationListItemDesc">Picture of location</string>
+    <string name="mapButtonDesc">Button to google maps</string>
+    <string name="add_location_title_text">Add new location</string>
+    <string name="name_text">Name*:</string>
+    <string name="name_hint">Name</string>
+    <string name="description_hint">Description</string>
+    <string name="description_label">Description:</string>
+    <string name="camerabuttonDesc">Camera button</string>
+    <string name="pictureDesc">Picture ImageView</string>
+    <string name="gpsDataLabel">Gps Placeholder</string>
+    <string name="dateLabel">Date Placeholder</string>
+    <string name="addressLabel">Address Placeholder</string>
+    <string name="gpsbuttonDesc">GPS Button</string>
+    <string name="save">Save</string>
+    <string name="details_title">Details</string>
+    <string name="lat_placeholder">Lat Placeholder</string>
+    <string name="lng_placeholder">Lng Placeholder</string>
+    <string name="address_label_edit">Address*:</string>
+    <string name="address_hint">Address</string>
+    <string name="edit_location_title">Edit Location</string>
+    <string name="maps_title">Locations Map</string>
+</resources>

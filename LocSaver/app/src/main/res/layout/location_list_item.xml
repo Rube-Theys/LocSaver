@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:background="@drawable/borders_light_grey"
+  android:backgroundTint="@color/colorPrimaryDark">
+
+  <TextView
+      android:id="@+id/locationListItemName"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="16dp"
+      android:textColor="#FFFFFF"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toStartOf="@+id/locationListItemPicture"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/locationListItemAddress"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="16dp"
+      android:fontFamily="@font/lato_bold"
+      android:textColor="@android:color/background_light"
+      android:textSize="18sp"
+      app:layout_constraintEnd_toStartOf="@+id/locationListItemPicture"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/locationListItemName" />
+
+  <TextView
+      android:id="@+id/locationListItemDateTime"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="16dp"
+      android:layout_marginBottom="8dp"
+      android:fontFamily="@font/lato_bold"
+      android:textColor="@android:color/background_light"
+      android:textSize="12sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/locationListItemPicture"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/locationListItemAddress" />
+
+  <ImageView
+      android:id="@+id/locationListItemPicture"
+      android:layout_width="70dp"
+      android:layout_height="0dp"
+      android:layout_marginTop="2dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginBottom="2dp"
+      android:contentDescription="@string/locationListItemDesc"
+      android:scaleType="fitXY"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/ic_launcher_background" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

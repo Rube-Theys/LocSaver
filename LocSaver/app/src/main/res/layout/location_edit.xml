@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ui.EditLocation">
+
+    <View
+        android:id="@+id/view"
+        style="@style/Divider"
+        android:layout_marginTop="71dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/EditLocationTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/kalam_bold"
+        android:text="@string/edit_location_title"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/editBackBTN"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roundbutton"
+        android:contentDescription="@string/add_button_plus"
+        android:src="@drawable/abc_vector_test"
+        android:text="@string/add_button_plus"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/editLocationNameTextView"
+        style="@style/CustomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/name_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/editLocationAddressTextView"
+        style="@style/CustomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/address_label_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editLocationDescriptionEditText" />
+
+    <EditText
+        android:id="@+id/editLocationNameEditText"
+        style="@style/EditText"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="@string/name_hint"
+        android:fontFamily="@font/lato_bold"
+        android:hint="@string/name_hint"
+        android:inputType="text"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editLocationNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/editLocationNameTextView" />
+
+    <EditText
+        android:id="@+id/editLocationAddressEditText"
+        style="@style/EditText"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="@string/name_hint"
+        android:fontFamily="@font/lato_bold"
+        android:hint="@string/address_hint"
+        android:inputType="text"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editLocationNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/editLocationAddressTextView" />
+
+    <TextView
+        android:id="@+id/editLocationDescriptionTextView"
+        style="@style/CustomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/description_label"
+        app:layout_constraintStart_toStartOf="@+id/editLocationNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/editLocationNameEditText" />
+
+    <EditText
+        android:id="@+id/editLocationDescriptionEditText"
+        style="@style/EditText"
+        android:layout_width="205dp"
+        android:layout_height="239dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="@string/description_hint"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="start"
+        android:hint="@string/description_hint"
+        android:inputType="textMultiLine"
+        android:lines="12"
+        android:minLines="12"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/editPictureImageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editLocationDescriptionTextView"
+        app:layout_constraintTop_toBottomOf="@+id/editLocationDescriptionTextView" />
+
+    <ImageView
+        android:id="@+id/editPictureImageView"
+        android:layout_width="155dp"
+        android:layout_height="275.5dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/pictureDesc"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/editLocationNameEditText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/editLocationNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/editLocationNameEditText"
+        tools:srcCompat="@drawable/borders_light_grey" />
+
+    <TextView
+        android:id="@+id/editGpsTextView"
+        style="@style/CustomText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/gpsDataLabel"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/editLocationAddressEditText"
+        app:layout_constraintTop_toBottomOf="@+id/editLocationAddressEditText" />
+
+    <TextView
+        android:id="@+id/editDateTextView"
+        style="@style/CustomText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/dateLabel"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/editGpsTextView"
+        app:layout_constraintTop_toBottomOf="@+id/editGpsTextView" />
+
+    <Button
+        android:id="@+id/editLocationSaveButton"
+        android:layout_width="165dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editDateTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>

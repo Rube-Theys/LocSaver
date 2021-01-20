@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ui.AddLocation">
+
+    <View
+        android:id="@+id/view"
+        style="@style/Divider"
+        android:layout_marginTop="71dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/addLocationTitleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/kalam_bold"
+        android:text="@string/add_location_title_text"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/backBTN"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roundbutton"
+        android:contentDescription="@string/add_button_plus"
+        android:src="@drawable/abc_vector_test"
+        android:text="@string/add_button_plus"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/cameraBTN"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/roundbutton"
+        android:contentDescription="@string/camerabuttonDesc"
+        android:scaleType="fitCenter"
+        android:src="@android:drawable/ic_menu_camera"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pictureImageView" />
+
+    <ImageButton
+        android:id="@+id/gpsBTN"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roundbutton"
+        android:contentDescription="@string/gpsbuttonDesc"
+        android:scaleType="centerInside"
+        android:src="@android:drawable/ic_menu_mapmode"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="40sp"
+        app:layout_constraintStart_toStartOf="@+id/locationDescriptionEditText"
+        app:layout_constraintTop_toBottomOf="@+id/locationDescriptionEditText" />
+
+    <TextView
+        android:id="@+id/locationNameTextView"
+        style="@style/CustomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/name_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <EditText
+        android:id="@+id/locationNameEditText"
+        style="@style/EditText"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="@string/name_hint"
+        android:fontFamily="@font/lato_bold"
+        android:hint="@string/name_hint"
+        android:inputType="text"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/locationNameTextView"
+        app:layout_constraintTop_toBottomOf="@+id/locationNameTextView" />
+
+    <TextView
+        android:id="@+id/locationDescriptionTextView"
+        style="@style/CustomText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/description_label"
+        app:layout_constraintStart_toStartOf="@+id/locationNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/locationNameEditText" />
+
+    <EditText
+        android:id="@+id/locationDescriptionEditText"
+        style="@style/EditText"
+        android:layout_width="205dp"
+        android:layout_height="239dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:autofillHints="@string/description_hint"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="start"
+        android:hint="@string/description_hint"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:minLines="8"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/pictureImageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/locationDescriptionTextView"
+        app:layout_constraintTop_toBottomOf="@+id/locationDescriptionTextView" />
+
+    <ImageView
+        android:id="@+id/pictureImageView"
+        android:layout_width="155dp"
+        android:layout_height="275.5dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/pictureDesc"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/locationNameEditText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/locationNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/locationNameEditText"
+        tools:srcCompat="@drawable/borders_light_grey" />
+
+    <TextView
+        android:id="@+id/gpsTextView"
+        style="@style/CustomText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/gpsDataLabel"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/locationNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/addressTextView" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        style="@style/CustomText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/dateLabel"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@+id/gpsBTN"
+        app:layout_constraintTop_toBottomOf="@+id/locationDescriptionEditText" />
+
+    <TextView
+        android:id="@+id/addressTextView"
+        style="@style/CustomText"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/addressLabel"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/locationNameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/gpsBTN" />
+
+    <Button
+        android:id="@+id/locationAddButton"
+        android:layout_width="165dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/lato_bold"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gpsTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
